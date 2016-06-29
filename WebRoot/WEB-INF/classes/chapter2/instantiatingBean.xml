@@ -16,5 +16,15 @@ http://www.springframework.org/schema/context                http://www.springfr
 <!-- 指定构造器参数 -->  
     <constructor-arg index="0" value="Hello Spring!"/>  
 </bean>  
+<bean name="bean3" class="com.xuetao.spring.example.helloworld.HelloApiStaticFactory" factory-method="newInstance" >  
+<!-- 指定构造器参数 -->  
+    <constructor-arg index="0" value="Hello Spring2!"/>  
+</bean>  
+
+<bean id="beanfactory" class="com.xuetao.spring.example.helloworld.HelloApiStaticFactory"/>
+
+<bean id="bean4" factory-bean="beanfactory" factory-method="newInstance2">
+    <constructor-arg index="0" value="Hello Spring33!"/>  
+</bean>
 
 </beans>
