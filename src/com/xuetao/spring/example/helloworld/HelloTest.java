@@ -91,26 +91,5 @@ public class HelloTest
 		HelloApi helloApi1 = beanFactory.getBean("bean2", HelloApi.class);
 		helloApi1.sayHello();
 	}
-	@Test
-	public void test9()
-	{
 
-		BeanFactory beanFactory = new ClassPathXmlApplicationContext(
-				"chapter2/instantiatingBean.xml");
-		HelloApi helloApi = beanFactory.getBean("bean3", HelloApi.class);
-		helloApi.sayHello();
-
-	
-	}
-	@Test
-	public void test10()
-	{
-
-		BeanFactory beanFactory = new ClassPathXmlApplicationContext(
-				"chapter2/instantiatingBean.xml");
-		HelloApi helloApi = beanFactory.getBean("bean4", HelloApi.class);
-		helloApi.sayHello();
-
-	
-	}
 }
